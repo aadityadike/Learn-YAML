@@ -1,0 +1,16 @@
+<?xml version= "1.0" encoding="UTF-8"?>
+    <school name="kmpd" principal="nita naik">
+        <students>
+            <student>
+                <name>
+                    Aditya Dike
+                </name>
+                <rollno>
+                    12
+                </rollno>
+                <hobbie>
+                    coding
+                </hobbie>
+            </student>
+        </students>
+    </school>

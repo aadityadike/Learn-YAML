@@ -1,0 +1,66 @@
+#Strings. String representation in YAML.
+Myself: Aditya
+fullName: "Aditya Dike"
+MotherName: "Sejal Dike"
+
+---
+
+#Sentences. Sentence representation in YAML.
+mySelf: |
+  Aditya Dike
+  I am 18 years old.
+message: >
+  This
+  will
+  look like a
+  single line in another format.
+
+---
+
+#same as
+message: !!str This will look like a single line.
+
+---
+
+#Integers. Integer representation in YAML.
+number: 30
+floatNumber: 20.4
+
+---
+
+#Boolean. Boolean representation in YAML.
+booleanYes: yes # Yes, y, Y, True, true, TRUE.
+booleanNo: no # No, N, n, false, False, FALSE.
+
+---
+
+# DataType Specification. YAML automatically identify the dataType but you can specify also.
+integer: !!int 9 # you can also specify any number e.g negative number.
+binaryNumber: 0b11001
+octalNum: !!int 0389
+hexaNum: !!int 0x30
+comaValue: +489_000 # 489,000.
+ExponentialNum: 3.12E13
+
+---
+
+#Other types.
+
+floatNum: !!float 90.00
+infinite: !!float .inf
+notANumber: .nam
+null: !!null Null # or null,NULL,~
+
+---
+
+~: This is a null key
+
+---
+
+#Dates & Time
+date: !!timestamp 2022-04-09
+india Time: 2022-04-09T12:30:12 +5.30 # Time zone.
+Time: 2022-04-09T12:30:12 # No Time zone.
+
+---
+

@@ -1,0 +1,17 @@
+"key": "value"
+---
+#list
+- apple
+- mango
+- orange
+---
+{ mango: "yellow fruit", age:30 }
+---
+#blocks
+cities:
+  - mumbai
+  - new delhi
+  - bangalore
+
+---
+cities:[new delhi, mumbai]

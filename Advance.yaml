@@ -1,0 +1,90 @@
+#Sequences in YAML.
+
+student: # standard Sequence format in
+  - Aditya
+  - 12
+  - mumbai
+# you can write also like this:
+Student: [Aditya, 12, mumbai]
+
+---
+# some of the keys are empty. That is known as Sparse Sequence.
+Sparse seq:
+  - hey
+  - hello
+  -
+  - Null
+  - 10
+
+# Nested Sequence in YAML.
+Nested:
+  - - nested item1
+    - nested item2
+    - nested item3
+  - - nested item1
+    - nested item2
+    - nested item3
+
+---
+# key value pairs are called Maps.
+name: Aditya
+
+---
+# Nested mappings: map within an map.
+name: Aditya Dike.
+About: 
+   age: 30
+   job: student
+
+---
+# same as
+Name: Aditya Dike.
+About: { age: 30, job: student }
+
+---
+# pairs : !!pairs keys may have duplicate values.
+pairs example: !!pairs
+  - job: student
+  - job: Teacher
+
+# same as
+pair example: [job: student, job: Teacher]
+
+---
+# set will allow you to have unique values.
+names:
+Aditya:
+siddhesh:
+shubham:
+sahil:
+
+---
+# dictionary will allow you to store a sequence inside a variable. !!omap
+people:
+  - Aditya:
+      name: Aditya Dike.
+      age: 18
+      weight: 60
+  - Shubham:
+      name: Shubham kadam.
+      age: 19
+      weight: 70
+
+# Reusing the properties.
+# here i am saying that copy all the key values in likings sequence.
+
+Likings: &likes
+  fav fruit: mango
+  dislike: grapes.
+
+person1:
+  name: Sejal Dike
+  # here i am pasting just whatever i copy.
+  <<: *likes
+
+person2:
+  name: Aditya Dike
+  <<: *likes
+  dislike: mangos
+
+

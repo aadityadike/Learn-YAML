@@ -1,0 +1,18 @@
+{
+    "school": [
+      {
+        "name": "kmpd",
+        "principal": "nita naik",
+        "student": [
+          {
+            "name": "aditya dike.",
+            "roll no": 10
+          },
+          {
+            "name": "shubham kadam.",
+            "roll no": 13
+          }
+        ]
+      }
+    ]
+  }
